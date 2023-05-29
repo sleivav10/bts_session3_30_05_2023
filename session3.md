@@ -15,7 +15,7 @@ _class: invert
 
 # **Cloud and DevOps**
 
-**Introduction to AWS & Serverless**
+**AWS & Serverless**
 
 by Eduard Bargués
 
@@ -23,11 +23,35 @@ by Eduard Bargués
 
 ---
 
+# **Some changes**
+
+1. Hello Cloud
+2. Software development
+3. AWS & Serverless
+4. Security in AWS
+5. Cost management in AWS
+6. Devops & CICD
+7. Guest speaker
+
+![bg left:40% w:100%](https://media.istockphoto.com/id/1250483402/vector/important-announcement-speech-bubble-icon-vector-design.jpg?s=612x612&w=0&k=20&c=MSqRVE08RxLlcJaC6aP6ksT0HqHzUGM3Ieyu38hRTIU=)
+
+---
+
+# **Evaluation**
+
+**Assignments 70%**
+
+**Attendance & engagement 30%**
+
+![bg left:40% h:100%](images/math.png)
+
+---
+
 # **DevOps**
 
 **Dev**elopment & **Op**eration**s**
 
-![bg left:46% w:100%](images/devops.png)
+![bg left:40% w:100%](images/devops.png)
 
 ---
 
@@ -36,78 +60,87 @@ by Eduard Bargués
 Questions & troubleshooting
 Let's do some exercices together 💪
 
-![bg left:40% ](images/feature_questions_this_or_that_game.webp)
+![bg left:37% h:100%](images/feature_questions_this_or_that_game.webp)
 
 ---
 
 # **Development**
 
-1. Let's get familiar with the [src folder](src/).
-2. Find the function 'helloWorld'.
-3. Find the .js file where we test it.
-4. Create a new function called 'sumNumbers' that receives an array of integers and returns the sum of the them.
-5. Test it using [Jest](https://www.valentinog.com/blog/jest/)
+Find the [helloWorld function](src/helloWorld.js) and test it via the [console application](src/consoleApp.js).
 
-![bg left:30% h:100%](https://www.freecodecamp.org/news/content/images/2023/02/image3-1.png)
+Console apps are great for manual testing.
+
+For automation, we use test frameworks such as [Jest](https://www.valentinog.com/blog/jest/). Let's see an [example](tests/test.js).
+
+![bg left:20% h:100%](https://www.freecodecamp.org/news/content/images/2023/02/image3-1.png)
 
 ---
 
-# **Lambda+Javascript**
+# **Level up**
 
-> Get familiar with your code in AWS
+> Create a function called _processNumbers_ that receives a JSON object with one property _numbers_ as array of integers and returns an object containing the maximum number and the total sum.
 
-- Create a _hello world_ lambda.
+Do you know the [Math library](https://syllabus.migracode.org/courses/introduction-3/course-content/javascript-i/week-1)?
+
+Test it via a console application.
+
+Test it with Jest.
+
+![bg left:20% h:100%](https://www.freecodecamp.org/news/content/images/2023/02/image3-1.png)
+
+---
+
+# **NodeJs Lambda**
+
+- Create a _hello world_ Lambda.
 - Test it from the same UI.
-- Paste your code in the lambda.
-- Test it again.
+- Create a _processNumbers_ Lambda.
+- Create an appropiate event and test your Lambda.
 
-![bg left:28% w:100%](images/pythonLambdaAws.png)
+[Lambda in AWS](https://docs.aws.amazon.com/lambda/latest/dg/lambda-nodejs.html)
+
+![bg left:30% w:100%](images/nodeJsLambdaAws.png)
 
 ---
 
-# **Api**
+# **Application Program Interface**
 
-> Connect your Lambda with APIGW
+Exposes resources that users can send and retrieve data from.
+
+Usually, when we want to _obtain_ information, we use the GET operation (a.k.a http method).
+
+Let's explore [this api](https://jsonplaceholder.typicode.com/) with the help of [Postman](https://www.postman.com/downloads/).
+
+---
+
+# **Create an Api**
 
 - Create a REST API via AWS' UI.
 - Add a resource and method.
 - Create a 'mock' integration.
-- Test it.
+- Test it via [Postman](https://www.postman.com/downloads/).
 - Conect the method with Lambda.
 - Test it again.
 
-![bg left:29% w:100%](images/apigatewayLambda.png)
+![bg left:35% w:100%](images/postmanApigwLambda.png)
 
 ---
 
-# **Continous Integration**
+# **Investigate**
 
-> Methodology that allow developers to safely integrate their code. Answers the question: **Is my code ready to be released?**
+Something isn't right? 🤔
+[Cloudwatch](https://aws.amazon.com/cloudwatch/) can help us.
 
-![bg left:40% w:100%](images/devops.png)
-
----
-
-# **CI: Branches & Pull requests**
-
-> Developers separate their code in **branches** and use **pull requests**(PRs) to review their code.
-
-![bg left:40% w:100%](images/gitBranches.png)
+![bg left w:80%](images/questions.png)
+![bg left:50% w:100%](images/cloudwatch.png)
 
 ---
 
-# **CI: Github actions**
+# **Conclusions**
 
-> Github provides a tool so developers can create workflows that are triggered by 12s of events.
-
-Check out this [repository](https://github.com/EduardBargues/cicd-template).
-
-![bg left:34% w:100%](images/githubActions.png)
-
----
-
-# **CI: Testing**
-
-> Create a workflow that triggers every time a pull request is updated. Execute the unit tests previously created as a job.
-
-![bg left:50% h:100%](images/automatedTesting.png)
+- Javascript(Js) and JSON are best friends.
+- Lambda receives an _event_ and executes any function.
+- _Apis_ are interfaces that expose _resources_ and operations.
+- Endpoints can receive data via the request's _body_.
+- _APIgateway_ integrates with Lambda to create APIs.
+- _Console.log_ and _Cloudwatch_ help you troubleshoot.
