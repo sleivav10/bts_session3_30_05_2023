@@ -1,3 +1,4 @@
 const helloWorldFunction = require("./helloWorld");
 const response = helloWorldFunction();
-console.log(JSON.stringify(response));
+const text=JSON.stringify(response)
+console.log(text);
